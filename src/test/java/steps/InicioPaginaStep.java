@@ -9,6 +9,6 @@ public class InicioPaginaStep {
 	
 
 	public void abrirUrl() {
-		accionesWeb.abrirNavegador("https://google.com/");
+		accionesWeb.abrirNavegador("https://coink.com/");
 	}
 }

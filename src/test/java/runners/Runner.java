@@ -7,7 +7,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features"
-				,tags = "@Tag1"
+				,tags = "@Tag-1"
 				,glue = {"definitions"})
 
 public class Runner {

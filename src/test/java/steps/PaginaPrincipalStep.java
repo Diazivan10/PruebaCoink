@@ -11,22 +11,66 @@ public class PaginaPrincipalStep {
 	private AccionesWeb accionesWeb;	
 
 	@Step
-	public void seleccionarSeccionImagenes() {
+	
+	public void cerrarVentanaEmergente() {
 		accionesWeb.esperaCargarPagina();
-		accionesWeb.bordearElemento(PaginaPrincipalUI.getLblImagenes());
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getCerrarPopUp());
 		accionesWeb.tomarEvidencia();
-		accionesWeb.clickBoton(PaginaPrincipalUI.getLblImagenes());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getCerrarPopUp());
+		
+	}
+	public void seleccionarInicio() {
+
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getBotonIngreso());
+		accionesWeb.tomarEvidencia();
+		accionesWeb.clickBoton(PaginaPrincipalUI.getBotonIngreso());
+		accionesWeb.tomarEvidencia();
+		
+		
 	}
 	
-	public void escribirPalabraBuscador(String strPais){
-		accionesWeb.clickBoton(PaginaPrincipalUI.getChkBuscador());
-		accionesWeb.escribirTexto(PaginaPrincipalUI.getChkBuscador(),strPais);
+	
+
+
+	public void digitarNumero(String strNumero) {
 		accionesWeb.tomarEvidencia();
-		accionesWeb.clickBoton(PaginaPrincipalUI.getBotonBuscarImagen());
-		accionesWeb.esperaCargarPagina();
+		accionesWeb.clickBoton(PaginaPrincipalUI.getLblNumeroCelular());
+		accionesWeb.escribirTexto(PaginaPrincipalUI.getLblNumeroCelular(), strNumero);
 		accionesWeb.tomarEvidencia();
 		
 	}
+	
+	
+	public void digitarClave() {
+		accionesWeb.tomarEvidencia();
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getLblPassword());
+		accionesWeb.tomarEvidencia();
+	}
+	
+	
+	public void clickIngresar(){
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getBtnIngresar());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getBtnIngresar());
+		
+		
+		
+	}
+	public void cerrarIngresoNoValido(){
+		accionesWeb.esperaCargarPagina();
+		accionesWeb.tomarEvidencia();
+		accionesWeb.bordearElemento(PaginaPrincipalUI.getBtnOk());
+		accionesWeb.clickBoton(PaginaPrincipalUI.getBtnOk());
+		accionesWeb.esperaCargarPagina();
+		
+	}
+
 	
 	
 	
